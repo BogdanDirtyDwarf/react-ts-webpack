@@ -1,5 +1,6 @@
 import Post from "./post";
 import '@styles/styles.css';
+import '@styles/scss.scss';
 // import json from './assets/json';
 // import xml from './assets/data.xml';
 // import csv from './assets/data.csv';
