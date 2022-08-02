@@ -15,11 +15,11 @@ console.log('Post to String', post.toString());
 // console.log('CSV: ', csv);
 
 const App = () => (
-    <div class="container">
+    <div className="container">
         <h1>Webpack course</h1>
         <hr />
-        <div class="logo"></div>
-        <div class="box">
+        <div className="logo"></div>
+        <div className="box">
             <h2>SCSS</h2>
         </div>
     </div>
