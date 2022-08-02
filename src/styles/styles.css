@@ -1,3 +1,10 @@
+@import "~normalize.css";
+@import "roboto.css";
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 .container {
     padding-top: 2rem;
     max-width: 1000px;

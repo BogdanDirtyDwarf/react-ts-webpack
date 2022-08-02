@@ -2,25 +2,28 @@
   "name": "react-ts-webpack",
   "version": "1.0.0",
   "description": "Webpack + ts + react.js",
-  "main": "index.js",
+  "private": "true",
   "repository": "https://github.com/BogdanDirtyDwarf/react-ts-webpack.git",
   "author": "BogdanDirtyDwarf <i21s045@students.it-college.ru>",
   "license": "MIT",
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "webpack-dev-server": "^4.9.3"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
+    "csv-loader": "^3.0.5",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "xml-loader": "^1.2.1"
   },
   "scripts": {
     "dev": "webpack --mode development",
-    "start": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   }
 }
