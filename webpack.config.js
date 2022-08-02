@@ -11,26 +11,26 @@ const isProd = !isDev
 
 const optimization = () => {
     const config = {
-      splitChunks: {
-        chunks: 'all'
-      }
+        splitChunks: {
+            chunks: 'all'
+        }
     }
-  
+
     if (isProd) {
-      config.minimizer = [
-        new OptimizeCssAssetWebpackPlugin(),
-        new TerserWebpackPlugin()
-      ]
+        config.minimizer = [
+            new OptimizeCssAssetWebpackPlugin(),
+            new TerserWebpackPlugin()
+        ]
     }
-  
+
     return config
-  }
+}
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: './index.js',
+        main: ['@babel/polyfill', './index.js'],
         analytics: './analytics.js'
     },
     resolve: {
@@ -76,7 +76,7 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
-                test:/\.(sass|scss)$/i,
+                test: /\.(sass|scss)$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
@@ -94,6 +94,16 @@ module.exports = {
             {
                 test: /\.csv$/i,
                 use: ['csv-loader']
+            },
+            {
+                test: /\.m?js$/i,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react']
+                    }
+                }
             }
         ]
     }
