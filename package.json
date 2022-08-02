@@ -1,7 +1,7 @@
 {
   "name": "react-ts-webpack",
   "version": "1.0.0",
-  "description": "Webpack + ts",
+  "description": "Webpack + ts + react.js",
   "main": "index.js",
   "repository": "https://github.com/BogdanDirtyDwarf/react-ts-webpack.git",
   "author": "BogdanDirtyDwarf <i21s045@students.it-college.ru>",
