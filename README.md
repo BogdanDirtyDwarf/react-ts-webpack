@@ -5,17 +5,17 @@
 - Webpack
 
 ## Scripts
-### Start on 'http://localhost:1337/' (Mode: Development):
+Start on 'http://localhost:1337/' (Mode: Development):
 ```sh
 yarn start
 ```
 ------------
-### Build (Mode: Production):
+Build (Mode: Production):
 ```sh
 yarn build
 ```
 ------------
-### Build (Mode: Development):
+Build (Mode: Development):
 ```sh
 yarn dev
 ```
